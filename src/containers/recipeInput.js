@@ -4,7 +4,7 @@ import { bindActionCreators } from "redux";
 import * as recipeActions from "../actions/recipeActions";
 import recipeForm from "../components/recipeForm";
 
-class RecipeInput extends Component {
+class recipeInput extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -81,3 +81,5 @@ function mapDispatchToProps(dispatch) {
     actions: bindActionCreators(recipeActions, dispatch)
   };
 }
+
+export default connect(mapStateToProps, mapDispatchToProps)(RecipeInput);
