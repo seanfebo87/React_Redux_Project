@@ -6,41 +6,67 @@ import recipeForm from "../components/recipeForm";
 
 class RecipeInput extends Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
-      recipe: Object.assign({}, props.recipe),
+      recipe: Object.assign({}, props.recipe)
     };
   }
 
-  handleOnChange = (event) => {
-    const { name, value } = event.target
-    let newRecipe = Object.assign({}, this.state.recipe, { [name]: value })
-    return this.setState({ recipe: newRecipe })
-  
-  handleOnSubmit = (event) => {
-      event.preventDefault();
-      this.props.actions.createRecipe(this.state.recipe)
-        .then(() => this.saveRecipe())
-    }
+  handleOnChange = event => {
+    const { name, value } = event.target;
+    let newRecipe = Object.assign({}, this.state.recipe, { [name]: value });
+    return this.setState({ recipe: newRecipe });
+  };
+
+  handleOnSubmit = event => {
+    event.preventDefault();
+    this.props.actions
+      .createRecipe(this.state.recipe)
+      .then(() => this.saveRecipe());
+  };
 
   saveRecipe = () => {
-      this.props.history.push('/recipes');
-    }
+    this.props.history.push("/recipes");
+  };
 
-  render(){
-      return (
-        <section class="hero is-light is-fullheight is-bold">
-          <div class="hero-body">
-            <recipeForm type="text" name="name" value={this.state.recipe.name} placeholder="Name" onChange={this.handleOnChange} />
-            <recipeForm type="text" name="ingredients" value={this.state.recipe.ingredients} placeholder="Ingredients" onChange={this.handleOnChange} />
-            <recipeForm type="text" name="instructions" value={this.state.recipe.instructions} placeholder="Instructions" onChange={this.handleOnChange} />
-            <recipeForm type="text" name="picture" value={this.state.recipe.picture} placeholder="Picture" onChange={this.handleOnChange} />
-            <input type="submit" onSubmit={this.handleOnSubmit} />
-          </div>
-        </section>
-      )
-    }
+  render() {
+    return (
+      <section class="hero is-light is-fullheight is-bold">
+        <div class="hero-body">
+          <recipeForm
+            type="text"
+            name="name"
+            value={this.state.recipe.name}
+            placeholder="Name"
+            onChange={this.handleOnChange}
+          />
+          <recipeForm
+            type="text"
+            name="ingredients"
+            value={this.state.recipe.ingredients}
+            placeholder="Ingredients"
+            onChange={this.handleOnChange}
+          />
+          <recipeForm
+            type="text"
+            name="instructions"
+            value={this.state.recipe.instructions}
+            placeholder="Instructions"
+            onChange={this.handleOnChange}
+          />
+          <recipeForm
+            type="text"
+            name="picture"
+            value={this.state.recipe.picture}
+            placeholder="Picture"
+            onChange={this.handleOnChange}
+          />
+          <input type="submit" onSubmit={this.handleOnSubmit} />
+        </div>
+      </section>
+    );
   }
+}
 
 function mapStateToProps(state, ownProps) {
   let recipe = { name: "", instructions: "", ingredients: "", picture: "" };
