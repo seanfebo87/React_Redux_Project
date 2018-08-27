@@ -6,3 +6,22 @@ import about from "../components/about";
 import recipePage from "../components/recipePage";
 import recipesPage from "../containers/recipesPage";
 import recipeInput from "../containers/recipeInput";
+
+class App extends Component {
+  render() {
+    return (
+      <Router>
+        <div>
+          <navbar />
+          <Route exact path="/" component={home} />
+          <Route exact path="/about" component={about} />
+          <Route exact path="/recipe/:id" component={recipePage} />
+          <Route exact path="/recipes" component={recipesPage} />
+          <Route exact path="/recipe/new" component={recipeInput} />
+        </div>
+      </Router>
+    );
+  }
+}
+
+export default App;
