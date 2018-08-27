@@ -1,4 +1,5 @@
 import React from "react";
+import { connect } from "react-redux";
 
 const recipePage = ({ recipe }) => {
   return (
@@ -21,3 +22,5 @@ const mapStateToProps = (state, ownProps) => {
     return { recipe: {} };
   }
 };
+
+export default connect(mapStateToProps)(recipePage);
