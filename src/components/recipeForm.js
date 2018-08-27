@@ -15,4 +15,4 @@ const recipeForm = ({ type, name, placeholder, value, onChange }) => {
   );
 };
 
-export default TextInput;
+export default recipeForm;
