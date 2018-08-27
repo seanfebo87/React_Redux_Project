@@ -23,6 +23,10 @@ class RecipeInput extends Component {
         .then(() => this.saveRecipe())
     }
 
+  saveRecipe = () => {
+      this.props.history.push('/recipes');
+    }
+
 function mapStateToProps(state, ownProps) {
   let recipe = { name: "", instructions: "", ingredients: "", picture: "" };
 
