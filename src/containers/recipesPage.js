@@ -5,7 +5,7 @@ import recipeCard from "../components/recipeCard";
 import * as recipeActions from "../actions/recipeActions";
 import { bindActionCreators } from "redux";
 
-class RecipesPage extends Component {
+class recipesPage extends Component {
   componentDidMount() {
     this.props.actions.loadRecipe();
   }
