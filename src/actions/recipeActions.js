@@ -16,3 +16,26 @@ export function loadRecipe() {
       });
   };
 }
+
+function createRecipes(recipe) {
+  return { type: types.CREATE_RECIPE, recipe };
+}
+
+export function createRecipe(recipe) {
+  return function(dispatch) {
+    return fetch("/recipes", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify((recipe: recipe))
+    })
+      .then(response => response.json())
+      .then(recipe => {
+        dispatch(createRecipeSuccess(recipe));
+      })
+      .catch(error => {
+        throw error;
+      });
+  };
+}
