@@ -12,6 +12,11 @@ class RecipeInput extends Component {
     };
   }
 
+  handleOnChange = (event) => {
+    const { name, value } = event.target
+    let newRecipe = Object.assign({}, this.state.recipe, { [name]: value })
+    return this.setState({ recipe: newRecipe })
+
 function mapStateToProps(state, ownProps) {
   let recipe = { name: "", instructions: "", ingredients: "", picture: "" };
 
