@@ -6,12 +6,27 @@ import * as recipeActions from "../actions/recipeActions";
 import { bindActionCreators } from "redux";
 
 class RecipesPage extends Component {
-
   componentDidMount() {
     this.props.actions.loadRecipe();
   }
 
-
+  render() {
+    return (
+      <section class="hero is-light is-fullheight is-bold">
+        <div class="hero-head">
+          <br />
+          <div class="hero-body">
+            {this.props.recipes.length > 0 &&
+              this.props.recipes.map(recipe => (
+                <recipeCard key={recipe.id} recipe={recipe} />
+              ))}
+            <br />
+          </div>
+        </div>
+      </section>
+    );
+  }
+}
 
 function mapStateToProps(state) {
   return {
