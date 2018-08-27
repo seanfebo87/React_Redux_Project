@@ -32,7 +32,7 @@ export function createRecipe(recipe) {
     })
       .then(response => response.json())
       .then(recipe => {
-        dispatch(createRecipeSuccess(recipe));
+        dispatch(createRecipe(recipe));
       })
       .catch(error => {
         throw error;
