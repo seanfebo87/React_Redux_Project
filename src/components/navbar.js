@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const navbar = () => {
+const Navbar = () => {
   return (
     <nav class="navbar is-fixed-top">
       <div class="container">
@@ -26,4 +26,4 @@ const navbar = () => {
   );
 };
 
-export default navbar;
+export default Navbar;
