@@ -1,6 +1,6 @@
 import React from "react";
 
-const home = () => {
+const Home = () => {
   return (
     <section class="hero is-light is-fullheight is-bold">
       <div class="hero-body">
@@ -15,4 +15,4 @@ const home = () => {
   );
 };
 
-export default home;
+export default Home;
