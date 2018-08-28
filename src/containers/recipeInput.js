@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import * as recipeActions from "../actions/recipeActions";
-import recipeForm from "../components/recipeForm";
+import RecipeForm from "../components/recipeForm";
 
 class recipeInput extends Component {
   constructor(props) {
@@ -33,28 +33,28 @@ class recipeInput extends Component {
     return (
       <section class="hero is-light is-fullheight is-bold">
         <div class="hero-body">
-          <recipeForm
+          <RecipeForm
             type="text"
             name="name"
             value={this.state.recipe.name}
             placeholder="Name"
             onChange={this.handleOnChange}
           />
-          <recipeForm
+          <RecipeForm
             type="text"
             name="ingredients"
             value={this.state.recipe.ingredients}
             placeholder="Ingredients"
             onChange={this.handleOnChange}
           />
-          <recipeForm
+          <RecipeForm
             type="text"
             name="instructions"
             value={this.state.recipe.instructions}
             placeholder="Instructions"
             onChange={this.handleOnChange}
           />
-          <recipeForm
+          <RecipeForm
             type="text"
             name="picture"
             value={this.state.recipe.picture}
