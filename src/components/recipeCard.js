@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const recipeCard = ({ recipe }) => {
+const RecipeCard = ({ recipe }) => {
   return (
     <Link class="box" to={"/recipe/" + recipe.id}>
       <article class="media">
@@ -24,4 +24,4 @@ const recipeCard = ({ recipe }) => {
   );
 };
 
-export default recipeCard;
+export default RecipeCard;
