@@ -5,7 +5,7 @@ import RecipeCard from "../components/recipeCard";
 import * as recipeActions from "../actions/recipeActions";
 import { bindActionCreators } from "redux";
 
-class recipesPage extends Component {
+class RecipesPage extends Component {
   componentDidMount() {
     this.props.actions.loadRecipe();
   }
@@ -43,4 +43,4 @@ function mapDispatchToProps(dispatch) {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(recipesPage);
+)(RecipesPage);
