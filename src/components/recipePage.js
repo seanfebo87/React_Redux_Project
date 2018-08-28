@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 
-const recipePage = ({ recipe }) => {
+const RecipePage = ({ recipe }) => {
   return (
     <section class="hero is-light is-fullheight is-bold">
       <div class="hero-body">
@@ -23,4 +23,4 @@ const mapStateToProps = (state, ownProps) => {
   }
 };
 
-export default connect(mapStateToProps)(recipePage);
+export default connect(mapStateToProps)(RecipePage);
