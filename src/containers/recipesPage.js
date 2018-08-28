@@ -15,6 +15,8 @@ class RecipesPage extends Component {
       <section class="hero is-light is-fullheight is-bold">
         <div class="hero-head">
           <br />
+          <br />
+          <h1 class="title">recipes!</h1>
           <div class="hero-body">
             {this.props.recipes.length > 0 &&
               this.props.recipes.map(recipe => (
