@@ -1,6 +1,6 @@
 import React from "react";
 
-const about = () => {
+const About = () => {
   return (
     <section class="hero is-light is-fullheight is-bold">
       <div class="hero-body">
@@ -16,4 +16,4 @@ const about = () => {
   );
 };
 
-export default about;
+export default About;
