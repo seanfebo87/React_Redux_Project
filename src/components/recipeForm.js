@@ -1,6 +1,6 @@
 import React from "react";
 
-const recipeForm = ({ type, name, placeholder, value, onChange }) => {
+const RecipeForm = ({ type, name, placeholder, value, onChange }) => {
   return (
     <form>
       <input
@@ -15,4 +15,4 @@ const recipeForm = ({ type, name, placeholder, value, onChange }) => {
   );
 };
 
-export default recipeForm;
+export default RecipeForm;
