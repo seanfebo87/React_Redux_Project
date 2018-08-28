@@ -4,7 +4,7 @@ import { bindActionCreators } from "redux";
 import * as recipeActions from "../actions/recipeActions";
 import RecipeForm from "../components/recipeForm";
 
-class recipeInput extends Component {
+class RecipeInput extends Component {
   constructor(props) {
     super(props);
     this.state = {
