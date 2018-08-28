@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
-import recipeCard from "../components/recipeCard";
+import RecipeCard from "../components/recipeCard";
 import * as recipeActions from "../actions/recipeActions";
 import { bindActionCreators } from "redux";
 
@@ -18,7 +18,7 @@ class recipesPage extends Component {
           <div class="hero-body">
             {this.props.recipes.length > 0 &&
               this.props.recipes.map(recipe => (
-                <recipeCard key={recipe.id} recipe={recipe} />
+                <RecipeCard key={recipe.id} recipe={recipe} />
               ))}
             <br />
           </div>
