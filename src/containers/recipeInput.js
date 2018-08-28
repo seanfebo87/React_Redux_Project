@@ -8,7 +8,8 @@ class RecipeInput extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      recipe: Object.assign({}, props.recipe)
+      recipe: Object.assign({}, props.recipe),
+      saving: false
     };
   }
 
@@ -20,51 +21,36 @@ class RecipeInput extends Component {
 
   handleOnSubmit = event => {
     event.preventDefault();
+    this.setState({saving: true})
     this.props.actions
       .createRecipe(this.state.recipe)
       .then(() => this.saveRecipe());
+      .catch((error) => {
+        this.setState({saving: false})
+      })
   };
 
   saveRecipe = () => {
+    this.setState({saving: false})
     this.props.history.push("/recipes");
   };
 
-  render() {
+  render(){
+
     return (
-      <section class="hero is-light is-fullheight is-bold">
-        <div class="hero-body">
-          <RecipeForm
-            type="text"
-            name="name"
-            value={this.state.recipe.name}
-            placeholder="Name"
-            onChange={this.handleOnChange}
-          />
-          <RecipeForm
-            type="text"
-            name="ingredients"
-            value={this.state.recipe.ingredients}
-            placeholder="Ingredients"
-            onChange={this.handleOnChange}
-          />
-          <RecipeForm
-            type="text"
-            name="instructions"
-            value={this.state.recipe.instructions}
-            placeholder="Instructions"
-            onChange={this.handleOnChange}
-          />
-          <RecipeForm
-            type="text"
-            name="picture"
-            value={this.state.recipe.picture}
-            placeholder="Picture"
-            onChange={this.handleOnChange}
-          />
-          <input type="submit" onSubmit={this.handleOnSubmit} />
-        </div>
-      </section>
-    );
+    
+    <form onSubmit={this.handleOnSubmit}>
+    <br />
+    <br />
+    <br />
+      <RecipeForm type="text" name="name" value={this.state.recipe.name} placeholder="Name" onChange={this.handleOnChange} />
+      <RecipeForm type="text" name="ingredients" value={this.state.recipe.ingredients} placeholder="Ingredients" onChange={this.handleOnChange} />
+      <RecipeForm type="text" name="instructions" value={this.state.recipe.instructions} placeholder="Instructions" onChange={this.handleOnChange} />
+      <RecipeForm type="text" name="picture" value={this.state.recipe.picture} placeholder="Picture" onChange={this.handleOnChange} />
+      <input type="submit" />
+      </form>
+     
+    )
   }
 }
 
