@@ -19,6 +19,13 @@ class RecipesController < ApplicationController
 		render json: @recipe 
 	end
 	
+	def update
+		@recipe = Recipe.find(params[:id])
+		@recipe.voted
+		@recipe.save
+		render json: @recipe.id
+	end
+	
 	private
 
 	def recipe_params
