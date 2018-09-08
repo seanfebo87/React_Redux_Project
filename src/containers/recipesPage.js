@@ -9,6 +9,10 @@ class RecipesPage extends Component {
   componentDidMount() {
     this.props.actions.loadRecipe();
   }
+  
+  sortRecipes() { 
+  this.props.actions.sortRecipe();
+}
 
   render() {
     return (
@@ -17,6 +21,7 @@ class RecipesPage extends Component {
           <br />
           <br />
           <h1 class="title">recipes!</h1>
+          <button onClick={this.sortRecipes}>SORT</button>
           <div class="hero-body">
             {this.props.recipes.length > 0 &&
               this.props.recipes.map(recipe => (
