@@ -6,6 +6,11 @@ import * as recipeActions from "../actions/recipeActions";
 import { bindActionCreators } from "redux";
 
 class RecipesPage extends Component {
+  constructor(props) {
+    super(props)
+    this.sortRecipes = this.sortRecipes.bind(this)
+  }
+  
   componentDidMount() {
     this.props.actions.loadRecipe();
   }
