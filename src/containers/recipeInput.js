@@ -24,7 +24,7 @@ class RecipeInput extends Component {
     this.setState({saving: true})
     this.props.actions
       .createRecipe(this.state.recipe)
-      .then(() => this.saveRecipe());
+      .then(() => this.saveRecipe())
       .catch((error) => {
         this.setState({saving: false})
       })

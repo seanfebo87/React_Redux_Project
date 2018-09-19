@@ -1,8 +1,8 @@
 import { combineReducers } from "redux";
-import recipes from "./recipeReducer";
+import RecipeReducer from "./recipeReducer";
 
 const mainReducer = combineReducers({
-  recipes: recipes
+  recipes: RecipeReducer
 });
 
 export default mainReducer;

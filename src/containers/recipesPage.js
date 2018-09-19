@@ -6,15 +6,27 @@ import * as recipeActions from "../actions/recipeActions";
 import { bindActionCreators } from "redux";
 
 class RecipesPage extends Component {
+  constructor(props) {
+    super(props)
+    this.sortRecipes = this.sortRecipes.bind(this)
+  }
+  
   componentDidMount() {
     this.props.actions.loadRecipe();
   }
+  
+  sortRecipes() { 
+  this.props.actions.sortRecipe();
+}
 
   render() {
     return (
       <section class="hero is-light is-fullheight is-bold">
         <div class="hero-head">
           <br />
+          <br />
+          <h1 class="title">recipes!</h1>
+          <button onClick={this.sortRecipes}>SORT</button>
           <div class="hero-body">
             {this.props.recipes.length > 0 &&
               this.props.recipes.map(recipe => (
