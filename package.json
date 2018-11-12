@@ -5,6 +5,10 @@
   "description": "",
   "keywords": [],
   "main": "src/index.js",
+  "engines": {
+    "npm": "5.7.1",
+    "node": "9.5.0"
+  },
   "dependencies": {
     "bulma": "0.7.1",
     "react": "16.4.2",
