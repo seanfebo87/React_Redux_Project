@@ -21,6 +21,7 @@ class RecipeCard extends React.Component {
     })
   };
 
+ render() {
   return (
     <div>
     <Link class="box" to={"/recipe/" + this.props.recipe.id}>
@@ -46,5 +47,5 @@ class RecipeCard extends React.Component {
     </div>
   );
 };
-
+}
 export default RecipeCard;
