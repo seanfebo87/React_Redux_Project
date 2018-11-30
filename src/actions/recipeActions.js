@@ -23,7 +23,7 @@ export function loadRecipe() {
 
 export function sortRecipe() {
   return function(dispatch) {
-    return fetch("/recipes")
+    return fetch("/cookbookrailsapi.herokuapp.com/recipes")
       .then(response => response.json())
       .then(recipes => {
         dispatch(sortRecipes(recipes));
@@ -40,7 +40,7 @@ function createRecipes(recipe) {
 
 export function createRecipe(recipe) {
   return function(dispatch) {
-    return fetch("/recipes", {
+    return fetch("/cookbookrailsapi.herokuapp.com/recipes", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
