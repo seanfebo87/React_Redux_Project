@@ -10,7 +10,7 @@ function sortRecipes(recipes) {
 
 export function loadRecipe() {
   return function(dispatch) {
-    return fetch("/recipes")
+    return fetch("/cookbookrailsapi.herokuapp.com/recipes")
       .then(response => response.json())
       .then(recipes => {
         dispatch(loadRecipes(recipes));
