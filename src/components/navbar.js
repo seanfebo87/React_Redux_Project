@@ -16,7 +16,7 @@ const Navbar = () => {
             <Link class="navbar-item" to="/recipes">
               recipes
             </Link>
-            <Link class="navbar-item" to="/recipe/new">
+            <Link class="navbar-item" to="/new">
               add recipe
             </Link>
           </div>
