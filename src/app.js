@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import Navbar from "./components/navbar";
 import home from "./components/home";
 import about from "./components/about";
-import recipePage from "./components/recipePage";
 import recipesPage from "./containers/recipesPage";
 import recipeInput from "./containers/recipeInput";
 
@@ -15,7 +14,6 @@ class App extends Component {
           <Navbar />
           <Route exact path="/" component={home} />
           <Route exact path="/about" component={about} />
-          <Route exact path="/recipe/:id" component={recipePage} />
           <Route exact path="/recipes" component={recipesPage} />
           <Route exact path="/new" component={recipeInput} />
         </div>
