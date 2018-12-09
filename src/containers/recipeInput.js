@@ -45,8 +45,7 @@ class RecipeInput extends Component {
     <br />
       <RecipeForm classs="input" type="text" name="name" value={this.state.recipe.name} placeholder="Name" onChange={this.handleOnChange} />
       <RecipeForm classs="input" type="text" name="picture" value={this.state.recipe.picture} placeholder="Picture" onChange={this.handleOnChange} />
-      <RecipeForm classs="input" type="text" name="ingredients" value={this.state.recipe.ingredients} placeholder="Ingredients" onChange={this.handleOnChange} />
-      <textarea class="textarea" name="instructions" value={this.state.recipe.instructions} placeholder="Instructions" onChange={this.handleOnChange} />
+      <RecipeForm classs="input" type="text" name="url" value={this.state.recipe.url} placeholder="URL" onChange={this.handleOnChange} />
       <input type="submit" />
       </form>
      
