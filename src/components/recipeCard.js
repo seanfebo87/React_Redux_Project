@@ -24,7 +24,7 @@ class RecipeCard extends React.Component {
  render() {
   return (
     <div>
-    <Link class="box" to={"/recipe/" + this.props.recipe.id}>
+    <Link class="box" to={this.props.recipe.url}>
       <article class="media">
         <div class="media-left">
           <figure class="image is-64x64">
