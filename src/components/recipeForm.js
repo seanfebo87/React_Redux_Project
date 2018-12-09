@@ -2,9 +2,9 @@ import React from "react";
 
 const RecipeForm = ({ type, name, placeholder, value, onChange }) => {
   return (
-    <form>
+   <form>
       <input
-        class="input"
+        class={classs}
         type={type}
         name={name}
         placeholder={placeholder}
