@@ -4,7 +4,7 @@ const RecipeForm = ({ type, name, placeholder, value, onChange }) => {
   return (
    <form>
       <input
-        class={classs}
+        class="input"
         type={type}
         name={name}
         placeholder={placeholder}
