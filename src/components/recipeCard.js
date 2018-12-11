@@ -12,7 +12,7 @@ class RecipeCard extends React.Component {
   voteRecipe = (id) => {
   this.setState({votes: this.props.recipe.votes += 1})
   id = this.props.recipe.id
-    return fetch(`/recipes/${id}`, {
+    return fetch(`https://cookbookrailsapi.herokuapp.com/recipes/${id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json"
