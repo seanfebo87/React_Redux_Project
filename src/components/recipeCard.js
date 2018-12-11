@@ -24,7 +24,7 @@ class RecipeCard extends React.Component {
  render() {
   return (
     <div>
-    <Link class="box" to={this.props.recipe.url}>
+    <a class="box" href={this.props.recipe.url}>
       <article class="media">
         <div class="media-left">
           <figure class="image is-64x64">
@@ -41,7 +41,7 @@ class RecipeCard extends React.Component {
           </div>
         </div>
       </article>
-    </Link>
+    </a>
     <button onClick={this.voteRecipe}>VOTE</button>
     <p>{this.state.votes}</p>
     </div>
